@@ -8,14 +8,13 @@ const Navbar = () => {
       <div>Anthony Lasam</div>
 
       {/* menu */}
-      <div>
-        <ul className="flex">
-          <li>Home</li>
-          <li>About</li>
-          <li>Work</li>
-          <li>Contact</li>
-        </ul>
-      </div>
+
+      <ul className="hidden md:flex">
+        <li>Home</li>
+        <li>About</li>
+        <li>Work</li>
+        <li>Contact</li>
+      </ul>
 
       {/* menu icon */}
       <div className="hidden">
