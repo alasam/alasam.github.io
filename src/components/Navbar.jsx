@@ -1,11 +1,19 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { BsFillPersonLin } from "react-icons/bs";
+import {
+  FaBars,
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaTimes,
+} from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 
 const Navbar = () => {
   const [Nav, setNav] = useState(false);
   const handleClick = () => setNav(!Nav);
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0A192f] text-gray-300">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-black text-gray-300">
       {/* logo/name */}
       <div>Anthony Lasam</div>
 
@@ -28,7 +36,7 @@ const Navbar = () => {
         className={
           !Nav
             ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-[#0A192f] flex flex-col justify-center items-center"
+            : "absolute top-0 left-0 w-full h-screen bg-black flex flex-col justify-center items-center"
         }
       >
         <li className="py-6 text-4xl">Home</li>
@@ -36,6 +44,17 @@ const Navbar = () => {
         <li className="py-6 text-4xl">Work</li>
         <li className="py-6 text-4xl">Contact</li>
       </ul>
+
+      {/* Social Icons */}
+      <div className="flex fixed flex-col top-[35%] left-0">
+        <ul>
+          <li>
+            <a href="/">
+              <FaFacebook size={30} />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
