@@ -26,9 +26,14 @@ const Home = () => {
           building new and modern digital design and working to build web
           applications with improved customer experiences.
         </p>
-        <button>
-          My Projects <HiArrowNarrowRight />
-        </button>
+        <div>
+          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-green-800 hover:border-green-800">
+            My Projects{" "}
+            <span className="group-hover:rotate-90 group-hover:-translate-y-[0.3rem] duration-300">
+              <HiArrowNarrowRight className="ml-3" />
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   );
