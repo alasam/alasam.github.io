@@ -15,7 +15,11 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-black text-gray-300">
       {/* logo/name */}
-      <div>Anthony Lasam</div>
+      <div>
+        <h1 className="text-4xl font-bold tracking-widest text-green-800">
+          AL.
+        </h1>
+      </div>
 
       {/* menu */}
 
