@@ -17,7 +17,9 @@ const Navbar = () => {
       {/* logo/name */}
       <div>
         <h1 className="text-4xl font-bold tracking-widest text-green-800">
-          AL.
+          <span className="">A</span>
+          <span>L</span>
+          <span>.</span>
         </h1>
       </div>
 
