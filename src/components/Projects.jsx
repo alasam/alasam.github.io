@@ -1,5 +1,9 @@
 import React from "react";
 
+import jungle from "../assets/projects/jungle.PNG";
+import scheduler from "../assets/projects/scheduler.png";
+import tweeter from "../assets/projects/tweeter.png";
+
 const Projects = () => {
   return (
     <div name="projects" className="w-full md:h-screen bg-black text-gray-300">
@@ -12,8 +16,13 @@ const Projects = () => {
           <p className="py-4">Check out a few of my past works.</p>
         </div>
 
-        <div>
-          <div>
+        {/* cards */}
+        <div
+          style={{ backgroundImage: `url(${jungle})` }}
+          className="grid sm:grid-cols-2 md:grid-cols-3 gap-4"
+        >
+          <div className="shadow-lg shadow-slate-800 group container rounded-md flex justify-center items-center mx-auto content-div">
+            {/* hover effects */}
             <div>
               <span></span>
               <div>
