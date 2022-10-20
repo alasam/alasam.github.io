@@ -11,7 +11,7 @@ const Projects = () => {
     <div name="projects" className="w-full md:h-screen bg-black text-gray-300">
       {/* container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div>
+        <div className="flex items-center flex-col">
           <p className="text-4xl font-bold inline border-b-4 border-blue-500">
             Projects
           </p>
@@ -19,7 +19,7 @@ const Projects = () => {
         </div>
 
         {/* card container */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-4">
           {/* card */}
 
           {/* jungle */}
