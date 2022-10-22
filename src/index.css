@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+@import url("https://www.behance.net/gallery/38123161/Gothvetica-(Free-Font)/modules/236705893");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap");
 
 @layer base {
   body {
-    @apply font-[Raleway];
+    @apply font-[Trispace];
   }
   li {
     @apply px-4;

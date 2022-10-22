@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import { BsFillPersonFill, BsFillPersonLin } from "react-icons/bs";
-import {
-  FaBars,
-  FaFacebook,
-  FaGithub,
-  FaLinkedin,
-  FaTimes,
-} from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -19,7 +11,7 @@ const Navbar = () => {
       {/* logo/name */}
       <div>
         <h1 className="text-4xl font-bold tracking-widest text-green-800">
-          <span className="">A</span>
+          <span>A</span>
           <span>L</span>
           <span>.</span>
         </h1>
