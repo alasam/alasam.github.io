@@ -7,10 +7,10 @@ const Navbar = () => {
   const handleClick = () => setNav(!Nav);
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-black text-gray-300">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#e4efec] text-[#344b43] shadow-sm">
       {/* logo/name */}
       <div>
-        <h1 className="text-4xl font-bold tracking-widest text-green-800">
+        <h1 className="text-4xl font-bold tracking-widest text-[#94849B]">
           <span>A</span>
           <span>L</span>
           <span>.</span>

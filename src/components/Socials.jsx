@@ -16,7 +16,7 @@ const Socials = () => {
         {/* Linkedin */}
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gradient-to-r from-blue-600">
           <a
-            className="flex justify-between items-center w-full text-gray-300"
+            className="flex justify-between items-center w-full text-white"
             href="/"
           >
             Linkedin
@@ -26,7 +26,7 @@ const Socials = () => {
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gradient-to-r from-gray-700">
           <a
-            className="flex justify-between items-center w-full text-gray-300"
+            className="flex justify-between items-center w-full text-white"
             href="/"
           >
             Github
@@ -36,7 +36,7 @@ const Socials = () => {
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gradient-to-r from-indigo-500">
           <a
-            className="flex justify-between items-center w-full text-gray-300"
+            className="flex justify-between items-center w-full text-white"
             href="/"
           >
             Email
@@ -46,7 +46,7 @@ const Socials = () => {
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gradient-to-r from-green-600">
           <a
-            className="flex justify-between items-center w-full text-gray-300"
+            className="flex justify-between items-center w-full text-white"
             href="/"
           >
             Resume

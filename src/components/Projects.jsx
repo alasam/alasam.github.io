@@ -8,7 +8,10 @@ import tweeter from "../assets/projects/tweeter.png";
 
 const Projects = () => {
   return (
-    <div name="projects" className="w-full md:h-screen bg-black text-gray-300">
+    <div
+      name="projects"
+      className="w-full md:h-screen text-[#e4efec] bg-[#344b43]"
+    >
       {/* container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex items-center flex-col">
