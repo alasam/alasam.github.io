@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
@@ -6,8 +6,43 @@ const Navbar = () => {
   const [Nav, setNav] = useState(false);
   const handleClick = () => setNav(!Nav);
 
+  const [show, setShow] = useState(true);
+  const [scroll, setScroll] = useState(0);
+
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > scroll) {
+        // if scroll down hide the navbar
+        setShow(false);
+      } else {
+        // if scroll up show the navbar
+        setShow(true);
+      }
+
+      // remember current page location to use in the next move
+      setScroll(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [scroll]);
+
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#e4efec] text-[#344b43]">
+    <div
+      className={
+        show
+          ? "fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#e4efec] text-[#344b43] duration-1000"
+          : "fixed w-full h-[80px] flex justify-between items-center px-4  bg-[#e4efec] text-[#344b43] -translate-y-96 duration-1000 delay-1000"
+      }
+    >
       {/* logo/name */}
       <div>
         <h1 className="text-4xl font-bold tracking-widest">
@@ -22,22 +57,28 @@ const Navbar = () => {
       <ul className="hidden md:flex">
         <li>
           <Link to="home" smooth={true} duration={500}>
-            <p className="hover:animate-bounce">Home</p>
+            <p className="hover:opacity-50 transition-all duration-500">Home</p>
           </Link>
         </li>
         <li>
           <Link to="about" smooth={true} duration={500}>
-            About
+            <p className="hover:opacity-50 transition-all duration-500">
+              About
+            </p>
           </Link>
         </li>
         <li>
           <Link to="skills" smooth={true} duration={500}>
-            Skills
+            <p className="hover:opacity-50 transition-all duration-500">
+              Skills
+            </p>
           </Link>
         </li>
         <li>
           <Link to="projects" smooth={true} duration={500}>
-            Projects
+            <p className="hover:opacity-50 transition-all duration-500">
+              Projects
+            </p>
           </Link>
         </li>
         <li>
@@ -45,7 +86,7 @@ const Navbar = () => {
             to="contact"
             smooth={true}
             duration={500}
-            className="inline border-b-4 border-[#E3C1D3] animate-pulse"
+            className="inline border-b-4 border-[#E3C1D3] animate-pulse hover:opacity-50 transition-all duration-500"
           >
             Contact Me
           </Link>
