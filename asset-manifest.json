@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.d4fdce91.css",
+    "main.js": "/react-portfolio/static/js/main.0c1712e8.js",
+    "static/media/matchmaker.png": "/react-portfolio/static/media/matchmaker.7092b65076122149ff2b.png",
+    "static/media/jungle.PNG": "/react-portfolio/static/media/jungle.e4f51b97b364a31af0cf.PNG",
+    "static/media/tweeter.png": "/react-portfolio/static/media/tweeter.78c9b0e7bb5347cc63b2.png",
+    "static/media/ruby.png": "/react-portfolio/static/media/ruby.76df93cf57df266746e9.png",
+    "static/media/avatar.jpeg": "/react-portfolio/static/media/avatar.ed980755daf87f90e425.jpeg",
+    "static/media/scheduler.png": "/react-portfolio/static/media/scheduler.918b057555bf8f798d06.png",
+    "static/media/postgresql.png": "/react-portfolio/static/media/postgresql.346709d92d82791ad17d.png",
+    "static/media/react.png": "/react-portfolio/static/media/react.0cf951a69d8e58f83f9d.png",
+    "static/media/node.png": "/react-portfolio/static/media/node.952a9ea986dcfa5229ad.png",
+    "static/media/html.png": "/react-portfolio/static/media/html.2ba4fabc69a89a8f71e6.png",
+    "static/media/tailwind.png": "/react-portfolio/static/media/tailwind.e47ac876b8d4d0bba47a.png",
+    "static/media/css.png": "/react-portfolio/static/media/css.69a82c2d9e45c933a9cb.png",
+    "static/media/javascript.png": "/react-portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
+    "static/media/rails.png": "/react-portfolio/static/media/rails.bb6e12f46895b897cf27.png",
+    "index.html": "/react-portfolio/index.html",
+    "main.d4fdce91.css.map": "/react-portfolio/static/css/main.d4fdce91.css.map",
+    "main.0c1712e8.js.map": "/react-portfolio/static/js/main.0c1712e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4fdce91.css",
+    "static/js/main.0c1712e8.js"
+  ]
+}
