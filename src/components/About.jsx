@@ -5,11 +5,11 @@ const About = () => {
   return (
     <div
       name="about"
-      className="w-full h-screen bg-[#344b43] text-gray-300 py-6"
+      className="w-full h-auto bg-[#344b43] text-gray-300 py-6 sm:h-screen"
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
-        <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
-          <div className="sm:text-right pb-8 pl-4">
+        <div className="max-w-[1000px] w-full gap-8">
+          <div className="text-center sm:pb-8 pl-4 pb-4">
             <p className="text-4xl font-bold inline border-b-4 border-[#E3C1D3]">
               About
             </p>
@@ -33,8 +33,12 @@ const About = () => {
               company that I have the privilage to work with.
             </p>
           </div>
-          <div>
-            <img src={Avatar} className="rounded-full" />
+          <div className="object-center md:shrink-0">
+            <img
+              src={Avatar}
+              className=" rounded-full 
+              "
+            />
           </div>
         </div>
       </div>
