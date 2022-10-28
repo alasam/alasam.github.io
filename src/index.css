@@ -32,3 +32,7 @@
     hsla(242, 74%, 61%, 0.8)
   ) !important;
 }
+
+logo {
+  text-shadow: 5px 5px #558abb;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import { default as React, useState } from "react";
 import { BsFillPersonFill, BsFillPersonLin } from "react-icons/bs";
 import {
   FaBars,
@@ -8,6 +8,7 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { Link } from "react-scroll";
 
 const Socials = () => {
   return (
@@ -17,7 +18,7 @@ const Socials = () => {
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gradient-to-r from-blue-600">
           <a
             className="flex justify-between items-center w-full text-white"
-            href="/"
+            href="https://www.linkedin.com/in/anthony-lasam-795111124/"
           >
             Linkedin
             <FaLinkedin size={30} />
@@ -27,7 +28,7 @@ const Socials = () => {
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gradient-to-r from-gray-700">
           <a
             className="flex justify-between items-center w-full text-white"
-            href="/"
+            href="https://github.com/alasam"
           >
             Github
             <FaGithub size={30} />
@@ -35,19 +36,21 @@ const Socials = () => {
           {/* Email */}
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gradient-to-r from-indigo-500">
-          <a
-            className="flex justify-between items-center w-full text-white"
-            href="/"
-          >
-            Email
-            <HiOutlineMail size={30} />
-          </a>
+          <Link to="contact" smooth={true} duration={500}>
+            <a
+              className="flex justify-between items-center w-full text-white"
+              href="/"
+            >
+              Email
+              <HiOutlineMail size={30} />
+            </a>
+          </Link>
           {/* Resume */}
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gradient-to-r from-green-600">
           <a
             className="flex justify-between items-center w-full text-white"
-            href="/"
+            href="https://resume.creddle.io/resume/1js6x1tlebi"
           >
             Resume
             <BsFillPersonFill size={30} />

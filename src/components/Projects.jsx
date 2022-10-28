@@ -15,7 +15,7 @@ const Projects = () => {
       {/* container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex items-center flex-col">
-          <p className="text-4xl font-bold inline border-b-4 border-blue-500">
+          <p className="text-4xl font-bold inline border-b-4 border-[#E3C1D3]">
             Projects
           </p>
           <p className="py-4">Check out a few of my past works.</p>

@@ -13,7 +13,7 @@ const Contact = () => {
         className="flex flex-col max-w-[600px] w-full text-[#344b43]"
       >
         <div className="pb-8 pt-8 flex items-center flex-col">
-          <p className="text-4xl font-bold inline border-b-4 border-blue-500">
+          <p className="text-4xl font-bold inline border-b-4 border-[#E3C1D3]">
             Contact
           </p>
           <p className="py-4">These are the technologies I work with</p>

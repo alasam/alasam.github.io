@@ -7,13 +7,13 @@ const Navbar = () => {
   const handleClick = () => setNav(!Nav);
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#e4efec] text-[#344b43] shadow-sm">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#e4efec] text-[#344b43]">
       {/* logo/name */}
       <div>
-        <h1 className="text-4xl font-bold tracking-widest text-[#94849B]">
-          <span>A</span>
-          <span>L</span>
-          <span>.</span>
+        <h1 className="text-4xl font-bold tracking-widest">
+          <span className="animate-pulse animation-delay-50">A</span>
+          <span className="animate-pulse animation-delay-100">L</span>
+          <span className="animate-pulse animation-delay-150">.</span>
         </h1>
       </div>
 
@@ -22,7 +22,7 @@ const Navbar = () => {
       <ul className="hidden md:flex">
         <li>
           <Link to="home" smooth={true} duration={500}>
-            Home
+            <p className="hover:animate-bounce">Home</p>
           </Link>
         </li>
         <li>
@@ -41,7 +41,12 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="contact" smooth={true} duration={500}>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="inline border-b-4 border-[#E3C1D3] animate-pulse"
+          >
             Contact Me
           </Link>
         </li>
@@ -57,7 +62,7 @@ const Navbar = () => {
         className={
           !Nav
             ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-black flex flex-col justify-center items-center"
+            : "absolute top-0 left-0 w-full h-screen bg-[#344b43] text-[#e4efec] flex flex-col justify-center items-center"
         }
       >
         <li className="py-6 text-4xl">
