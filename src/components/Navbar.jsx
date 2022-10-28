@@ -12,14 +12,10 @@ const Navbar = () => {
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
       if (window.scrollY > scroll) {
-        // if scroll down hide the navbar
         setShow(false);
       } else {
-        // if scroll up show the navbar
         setShow(true);
       }
-
-      // remember current page location to use in the next move
       setScroll(window.scrollY);
     }
   };
@@ -28,7 +24,6 @@ const Navbar = () => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);
 
-      // cleanup function
       return () => {
         window.removeEventListener("scroll", controlNavbar);
       };
