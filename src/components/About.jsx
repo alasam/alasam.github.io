@@ -18,8 +18,8 @@ const About = () => {
         </div>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div>
-            <p className="sm:text-right text-4xl font-bold py-2 text-gray-500">
-              Hello! Thanks for dropping by. My name is Anthony Lasam
+            <p className="text-center sm:text-right text-4xl font-bold py-2 text-gray-500">
+              Hello! Thanks for dropping by. <br></br>I'm Anthony Lasam
             </p>
             <p className="sm:text-right py-2">
               I am a System Analyst with 8+ years of experience managing system

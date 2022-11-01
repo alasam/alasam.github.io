@@ -13,7 +13,10 @@ import Tailwind from "../assets/tailwind.png";
 
 const Skills = () => {
   return (
-    <div name="skills" className="w-full h-screen bg-[#e4efec] text-[#344b43]">
+    <div
+      name="skills"
+      className="w-full md:h-screen bg-[#e4efec] text-[#344b43]"
+    >
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center items-center w-full h-full">
         <div className="flex items-center flex-col">

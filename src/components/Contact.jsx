@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-[#e4efec] text-[#344b43] flex justify-center items-center p-4"
+      className="w-full md:h-screen bg-[#e4efec] text-[#344b43] flex justify-center items-center px-7"
     >
       {/* form container */}
       <form
@@ -16,7 +16,7 @@ const Contact = () => {
           <p className="text-4xl font-bold inline border-b-4 border-[#E3C1D3]">
             Contact
           </p>
-          <p className="py-4">These are the technologies I work with</p>
+          <p className="py-4">Reach out and lets start something new.</p>
         </div>
         <input
           type="text"

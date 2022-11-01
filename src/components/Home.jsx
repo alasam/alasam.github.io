@@ -14,9 +14,9 @@ const Home = () => {
         <h1 className="text-4xl sm:text-7xl font-bold text-[#344b43]">
           Anthony Lasam
         </h1>
-        <h2 className="text-3xl sm:text-6xl font-bold text-gray-500">
+        <h2 className="text-3xl sm:text-5xl font-bold text-gray-500">
           I am a{" "}
-          <a className="underline decoration-[#E3C1D3]">System Analyst</a> and a
+          {/* <a className="underline decoration-[#E3C1D3]">System Analyst</a> and a */}
           <a className="underline decoration-[#E3C1D3]">
             {" "}
             Full Stack Developer
@@ -24,8 +24,7 @@ const Home = () => {
           .
         </h2>
         <p className="text-[#344b43] py-4 max-w-[700px]">
-          I am a former System Analyst who has taken a deeper step into the tech
-          world and now is a fully fledge full-stack developer. Focusing on
+          I am based out of Toronto with a fresh passion for coding. Focused on
           building new and modern digital design and working to build web
           applications with improved customer experiences.
         </p>
