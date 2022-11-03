@@ -36,15 +36,17 @@ const Socials = () => {
           {/* Email */}
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gradient-to-r from-indigo-500">
-          <Link to="contact" smooth={true} duration={500}>
-            <a
-              className="flex justify-between items-center w-full text-white"
-              href="/"
-            >
+          <a
+            className="flex justify-between items-center w-full text-white"
+            to="contact"
+            smooth={true}
+            duration={500}
+          >
+            <Link to="contact" smooth={true} duration={500}>
               Email
-              <HiOutlineMail size={30} />
-            </a>
-          </Link>
+            </Link>
+            <HiOutlineMail size={30} />
+          </a>
           {/* Resume */}
         </li>
         <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gradient-to-r from-green-600">
