@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
@@ -31,7 +32,9 @@ const Navbar = () => {
   }, [scroll]);
 
   return (
-    <div
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
       className={
         show
           ? "fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#e4efec] text-[#344b43] duration-1000"
@@ -132,7 +135,7 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-    </div>
+    </motion.div>
   );
 };
 
