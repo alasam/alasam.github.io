@@ -1,16 +1,41 @@
-import { motion } from "framer-motion";
-import React, { useState } from "react";
+import { motion, useAnimation, whileInView } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
 
 const Home = () => {
   const [Nav, setNav] = useState(false);
   const handleClick = () => setNav(!Nav);
 
+  // Monitor if element is in view
+  const { ref, inView } = useInView({ threshold: 0.2 });
+  const animation = useAnimation();
+
+  // useEffect(() => {
+  //   console.log(inView);
+  // });
+
+  // useEffect(() => {
+  //   if (inView) {
+  //     animation.start({
+  //       opacity: 1,
+  //     });
+  //   }
+  //   if (!inView) {
+  //     animation.start({ opacity: 0 });
+  //   }
+  // }, [inView]);
+
   return (
     <div name="home" className="bg-[#e4efec] w-full h-screen">
       {/* Container */}
-      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        // animate={animation}
+        className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full"
+      >
         <motion.p
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
@@ -20,6 +45,7 @@ const Home = () => {
           Hello! My name is
         </motion.p>
         <motion.h1
+          ref={ref}
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ duration: 1, delay: 1 }}
@@ -64,9 +90,12 @@ const Home = () => {
             duration={500}
           >
             <motion.button
-              animate={{ opacity: 1 }}
+              // animate={{ opacity: 1 }}
+              // initial={{ opacity: 0 }}
+              // transition={{ delay: 3 }}
               initial={{ opacity: 0 }}
-              transition={{ delay: 3 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 3 }}
               className="text-[#344b43] hover:text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#344b43] hover:border-[#344b43] shadow-sm shadow-black"
             >
               My Projects{" "}
@@ -76,7 +105,7 @@ const Home = () => {
             </motion.button>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

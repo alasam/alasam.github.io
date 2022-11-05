@@ -1,3 +1,4 @@
+import { motion, useAnimation, whileInView } from "framer-motion";
 import React from "react";
 import Avatar from "../assets/avatar.jpeg";
 
