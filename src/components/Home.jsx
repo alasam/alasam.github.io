@@ -13,7 +13,7 @@ const Home = () => {
       <motion.div
         initial={{ x: -600, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+        transition={{ duration: 0.5 }}
         viewport={{ margin: "-400px" }}
         className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full"
       >
