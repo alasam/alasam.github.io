@@ -37,8 +37,8 @@ const Navbar = () => {
       initial={{ opacity: 0 }}
       className={
         show
-          ? "fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#e4efec] text-[#344b43] duration-1000"
-          : "fixed w-full h-[80px] flex justify-between items-center px-4  bg-[#e4efec] text-[#344b43] -translate-y-96 duration-1000 delay-1000"
+          ? "fixed z-50 w-full h-[80px] flex justify-between items-center px-4 bg-[#e4efec] text-[#344b43] duration-1000"
+          : "fixed z-50 w-full h-[80px] flex justify-between items-center px-4  bg-[#e4efec] text-[#344b43] -translate-y-96 duration-1000 delay-1000"
       }
     >
       {/* logo/name */}

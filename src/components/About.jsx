@@ -8,7 +8,14 @@ const About = () => {
       name="about"
       className="w-full h-auto bg-[#344b43] text-gray-300 py-6 sm:h-screen"
     >
-      <div className="flex flex-col justify-center items-center w-full h-full">
+      {/* Container */}
+      <motion.div
+        initial={{ x: 600, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+        viewport={{ margin: "-250px" }}
+        className="flex flex-col justify-center items-center w-full h-full"
+      >
         <div className="max-w-[1000px] w-full gap-8">
           <div className="text-center sm:pb-8 pl-4 pb-4">
             <p className="text-4xl font-bold inline border-b-4 border-[#E3C1D3]">
@@ -42,7 +49,7 @@ const About = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

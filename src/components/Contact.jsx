@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 const Contact = () => {
@@ -7,7 +8,11 @@ const Contact = () => {
       className="w-full md:h-screen bg-[#e4efec] text-[#344b43] flex justify-center items-center px-7"
     >
       {/* form container */}
-      <form
+      <motion.form
+        initial={{ x: -600, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        ttransition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+        viewport={{ margin: "-250px" }}
         method="POST"
         action="https://getform.io/f/69fcb290-3b61-483e-af1b-1d44ad8c19c4"
         className="flex flex-col max-w-[600px] w-full text-[#344b43]"
@@ -39,7 +44,7 @@ const Contact = () => {
         <button className="text-[#344b43] hover:text-white border-2 px-4 py-3 my-8 mx-auto flex items-center hover:bg-[#344b43] hover:border-[#344b43] shadow-sm shadow-black">
           Connect Now!
         </button>
-      </form>
+      </motion.form>
     </div>
   );
 };

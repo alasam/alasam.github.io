@@ -1,39 +1,20 @@
 import { motion, useAnimation, whileInView } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
 
 const Home = () => {
   const [Nav, setNav] = useState(false);
   const handleClick = () => setNav(!Nav);
 
-  // Monitor if element is in view
-  const { ref, inView } = useInView({ threshold: 0.2 });
-  const animation = useAnimation();
-
-  // useEffect(() => {
-  //   console.log(inView);
-  // });
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     animation.start({
-  //       opacity: 1,
-  //     });
-  //   }
-  //   if (!inView) {
-  //     animation.start({ opacity: 0 });
-  //   }
-  // }, [inView]);
-
   return (
     <div name="home" className="bg-[#e4efec] w-full h-screen">
       {/* Container */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        // animate={animation}
+        initial={{ x: -600, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+        viewport={{ margin: "-400px" }}
         className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full"
       >
         <motion.p
@@ -45,11 +26,10 @@ const Home = () => {
           Hello! My name is
         </motion.p>
         <motion.h1
-          ref={ref}
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ duration: 1, delay: 1 }}
-          className="text-4xl sm:text-7xl font-bold text-[#344b43]"
+          className="text-4xl sm:text-7xl font-bold text-[#344b43] pb-1"
         >
           Anthony Lasam
         </motion.h1>
