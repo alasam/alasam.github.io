@@ -32,16 +32,13 @@ const Navbar = () => {
   }, [scroll]);
 
   const menuAni = {
-    hidden: { y: 100, opacity: 0 },
+    hidden: { y: 100, opacity: 0, when: "afterChildren" },
     show: {
       y: 0,
       opacity: 1,
       transition: {
-        staggerChildren: 0.07,
-        delayChildren: 0.2,
         type: "spring",
         bounce: 0.4,
-        duration: 0.3,
       },
     },
     hover: { scale: 1.1, transition: { duration: 0.7 } },
@@ -119,29 +116,50 @@ const Navbar = () => {
 
       {/* mobile menu */}
       <motion.ul
-        variants={menuAni}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         className={
           !Nav
             ? "hidden"
             : "absolute top-0 left-0 w-full h-screen bg-[#344b43] text-[#e4efec] flex flex-col justify-center items-center"
         }
       >
-        <li className="py-6 text-4xl">
+        <motion.li
+          variants={menuAni}
+          initial={"hidden"}
+          whileInView={"show"}
+          className="py-6 text-4xl"
+        >
           <Link onClick={handleClick} to="home" smooth={true} duration={500}>
             Home
           </Link>
-        </li>
-        <li className="py-6 text-4xl">
+        </motion.li>
+        <motion.li
+          variants={menuAni}
+          initial={"hidden"}
+          whileInView={"show"}
+          className="py-6 text-4xl"
+        >
           <Link onClick={handleClick} to="about" smooth={true} duration={500}>
             About
           </Link>
-        </li>
-        <li className="py-6 text-4xl">
+        </motion.li>
+        <motion.li
+          variants={menuAni}
+          initial={"hidden"}
+          whileInView={"show"}
+          className="py-6 text-4xl"
+        >
           <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
             Skills
           </Link>
-        </li>
-        <li className="py-6 text-4xl">
+        </motion.li>
+        <motion.li
+          variants={menuAni}
+          initial={"hidden"}
+          whileInView={"show"}
+          className="py-6 text-4xl"
+        >
           <Link
             onClick={handleClick}
             to="projects"
@@ -150,12 +168,17 @@ const Navbar = () => {
           >
             Projects
           </Link>
-        </li>
-        <li className="py-6 text-4xl">
+        </motion.li>
+        <motion.li
+          variants={menuAni}
+          initial={"hidden"}
+          whileInView={"show"}
+          className="py-6 text-4xl"
+        >
           <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
             Contact
           </Link>
-        </li>
+        </motion.li>
       </motion.ul>
     </motion.div>
   );
