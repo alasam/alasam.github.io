@@ -11,7 +11,7 @@ const Home = () => {
     <div name="home" className="bg-[#e4efec] w-full h-screen">
       {/* Container */}
       <motion.div
-        initial={{ x: -600, opacity: 0 }}
+        initial={{ x: "53vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
         viewport={{ margin: "-300px" }}

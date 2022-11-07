@@ -15,7 +15,7 @@ const Projects = () => {
     >
       {/* container */}
       <motion.div
-        initial={{ x: 600, opacity: 0 }}
+        initial={{ x: "-54vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
         viewport={{ margin: "-300px" }}
@@ -42,7 +42,7 @@ const Projects = () => {
               duration: 0.5,
             }}
             style={{ backgroundImage: `url(${jungle})` }}
-            className="shadow-lg shadow-slate-800 group container rounded-md text-center flex justify-center items-center mx-auto content-div"
+            className="shadow-lg shadow-black group container rounded-md text-center flex justify-center items-center mx-auto content-div"
           >
             {/* hover effects */}
             <div className="opacity-0 group-hover:opacity-100">

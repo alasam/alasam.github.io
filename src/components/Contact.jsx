@@ -2,6 +2,20 @@ import { motion } from "framer-motion";
 import React from "react";
 
 const Contact = () => {
+  const popIn = {
+    hidden: { y: 100, opacity: 0 },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.3,
+      },
+    },
+    hover: { scale: 1.1, transition: { duration: 0.5 } },
+  };
+
   return (
     <div
       name="contact"
@@ -9,7 +23,7 @@ const Contact = () => {
     >
       {/* form container */}
       <motion.form
-        initial={{ x: -600, opacity: 0 }}
+        initial={{ x: "-50vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         ttransition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
         viewport={{ margin: "-250px" }}
@@ -23,19 +37,40 @@ const Contact = () => {
           </p>
           <p className="py-4">Reach out and lets start something new.</p>
         </div>
-        <input
+        <motion.input
+          initial={{ y: 300, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            bounce: 0.2,
+            duration: 0.5,
+          }}
           type="text"
           placeholder="Name"
           name="name"
           className="my-4 p-2 bg-white text-black"
         />
-        <input
+        <motion.input
+          initial={{ y: 300, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            bounce: 0.2,
+            duration: 0.5,
+          }}
           type="Email"
           placeholder="Email"
           name="email"
           className=" my-4 p-2 bg-white text-black"
         />
-        <textarea
+        <motion.textarea
+          initial={{ y: 300, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            bounce: 0.2,
+            duration: 0.5,
+          }}
           name="message"
           rows="10"
           placeholder="Message"
