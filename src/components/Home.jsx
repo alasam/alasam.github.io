@@ -50,7 +50,6 @@ const Home = () => {
             {" "}
             Full Stack Developer
           </motion.a>
-          .
         </motion.h2>
         <motion.p
           animate={{ opacity: 1 }}
