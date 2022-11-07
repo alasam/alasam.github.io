@@ -1,5 +1,5 @@
-import { motion, useAnimation, whileInView } from "framer-motion";
-import React, { useState } from "react";
+import { motion, useInView } from "framer-motion";
+import React, { useRef, useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 
@@ -7,14 +7,19 @@ const Home = () => {
   const [Nav, setNav] = useState(false);
   const handleClick = () => setNav(!Nav);
 
+  // Framer Motion ref for useInView
+  const container = useRef(null);
+  const ref = useRef(null);
+  const isInView = useInView({ root: container });
+
   return (
-    <div name="home" className="bg-[#e4efec] w-full h-screen">
+    <div ref={container} name="home" className="bg-[#e4efec] w-full h-screen">
       {/* Container */}
       <motion.div
-        initial={{ x: "53vw", opacity: 0 }}
+        ref={ref}
+        initial={{ x: "55vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", bounce: 0.2, duration: 0.7 }}
-        viewport={{ margin: "-300px" }}
         className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full"
       >
         <motion.p

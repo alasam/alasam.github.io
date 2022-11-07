@@ -1,6 +1,5 @@
-import React from "react";
-
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
 import { BsGithub } from "react-icons/bs";
 import jungle from "../assets/projects/jungle.PNG";
 import matchmaker from "../assets/projects/matchmaker.png";
@@ -8,17 +7,25 @@ import scheduler from "../assets/projects/scheduler.png";
 import tweeter from "../assets/projects/tweeter.png";
 
 const Projects = () => {
+  // useInView referrence
+  const container = useRef(null);
+  const ref = useRef(null);
+  const isInView = useInView({
+    root: container,
+  });
+
   return (
     <div
+      ref={container}
       name="projects"
       className="w-full md:h-screen text-[#e4efec] bg-[#344b43]"
     >
       {/* container */}
       <motion.div
-        initial={{ x: "-54vw", opacity: 0 }}
+        ref={ref}
+        initial={{ x: "-30vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", bounce: 0.2, duration: 0.7 }}
-        viewport={{ margin: "-300px" }}
         className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full"
       >
         <div className="flex items-center flex-col">
@@ -34,12 +41,12 @@ const Projects = () => {
 
           {/* jungle */}
           <motion.div
-            initial={{ y: 300, opacity: 0 }}
+            initial={{ y: 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
               type: "spring",
               bounce: 0.2,
-              duration: 0.5,
+              duration: 1,
             }}
             style={{ backgroundImage: `url(${jungle})` }}
             className="shadow-lg shadow-black group container rounded-md text-center flex justify-center items-center mx-auto content-div"
@@ -69,12 +76,12 @@ const Projects = () => {
 
           {/* scheduler */}
           <motion.div
-            initial={{ y: 300, opacity: 0 }}
+            initial={{ y: 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
               type: "spring",
               bounce: 0.2,
-              duration: 0.5,
+              duration: 1,
               delay: 0.1,
             }}
             style={{ backgroundImage: `url(${scheduler})` }}
@@ -102,12 +109,12 @@ const Projects = () => {
 
           {/* tweeter */}
           <motion.div
-            initial={{ y: 300, opacity: 0 }}
+            initial={{ y: 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
               type: "spring",
               bounce: 0.2,
-              duration: 0.5,
+              duration: 1,
             }}
             style={{ backgroundImage: `url(${tweeter})` }}
             className="shadow-lg shadow-slate-800 group container rounded-md text-center flex justify-center items-center mx-auto content-div"
@@ -134,12 +141,12 @@ const Projects = () => {
 
           {/* matchmaker */}
           <motion.div
-            initial={{ y: 300, opactiy: 0 }}
+            initial={{ y: 60, opactiy: 0 }}
             whileInView={{ y: 0, opactiy: 1 }}
             transition={{
               type: "spring",
               bounce: 0.2,
-              duration: 0.5,
+              duration: 1,
               delay: 0.1,
             }}
             style={{ backgroundImage: `url(${matchmaker})` }}

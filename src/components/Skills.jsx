@@ -1,6 +1,5 @@
-import React from "react";
-
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
 import CSS from "../assets/css.png";
 import GitHub from "../assets/github.png";
 import HTML from "../assets/html.png";
@@ -13,6 +12,11 @@ import Ruby from "../assets/ruby.png";
 import Tailwind from "../assets/tailwind.png";
 
 const Skills = () => {
+  // useInView ref
+  const container = useRef(null);
+  const ref = useRef(null);
+  const isInView = useInView({ root: container });
+
   // Skills pop-up animation
   const popIn = {
     hidden: { y: 100, opacity: 0 },
@@ -30,16 +34,17 @@ const Skills = () => {
 
   return (
     <div
+      ref={container}
       name="skills"
       className="w-full md:h-screen bg-[#e4efec] text-[#344b43]"
     >
       {/* Container */}
 
       <motion.div
-        initial={{ x: "54vw", opacity: 0 }}
+        ref={ref}
+        initial={{ x: "30vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
-        viewport={{ margin: "-300px" }}
         className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center items-center w-full h-full"
       >
         <div className="flex items-center flex-col">

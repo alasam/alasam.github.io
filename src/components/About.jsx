@@ -1,16 +1,23 @@
-import { motion, useAnimation, whileInView } from "framer-motion";
-import React from "react";
+import { motion, useAnimation, useInView, whileInView } from "framer-motion";
+import React, { useRef } from "react";
 import Avatar from "../assets/avatar.jpeg";
 
 const About = () => {
+  // useInView Reference
+  const container = useRef(null);
+  const ref = useRef(null);
+  const isInView = useInView({ root: container });
+
   return (
     <div
+      ref={container}
       name="about"
       className="w-full h-auto bg-[#344b43] text-gray-300 py-6 sm:h-screen"
     >
       {/* Container */}
       <motion.div
-        initial={{ x: "-54vw", opacity: 0 }}
+        ref={ref}
+        initial={{ x: "-30vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", bounce: 0.2, duration: 0.7 }}
         viewport={{ margin: "-250px" }}

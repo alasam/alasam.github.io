@@ -1,32 +1,24 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
 
 const Contact = () => {
-  const popIn = {
-    hidden: { y: 100, opacity: 0 },
-    show: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        bounce: 0.4,
-        duration: 0.3,
-      },
-    },
-    hover: { scale: 1.1, transition: { duration: 0.5 } },
-  };
+  // useInView reference
+  const container = useRef(null);
+  const ref = useRef(null);
+  const isInView = useInView({ root: container });
 
   return (
     <div
+      ref={container}
       name="contact"
       className="w-full md:h-screen bg-[#e4efec] text-[#344b43] flex justify-center items-center px-7"
     >
       {/* form container */}
       <motion.form
-        initial={{ x: "-50vw", opacity: 0 }}
+        ref={ref}
+        initial={{ x: "-55vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         ttransition={{ type: "spring", bounce: 0.2, duration: 0.7 }}
-        viewport={{ margin: "-250px" }}
         method="POST"
         action="https://getform.io/f/69fcb290-3b61-483e-af1b-1d44ad8c19c4"
         className="flex flex-col max-w-[600px] w-full text-[#344b43]"

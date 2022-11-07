@@ -31,6 +31,22 @@ const Navbar = () => {
     }
   }, [scroll]);
 
+  const menuAni = {
+    hidden: { y: 100, opacity: 0 },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.07,
+        delayChildren: 0.2,
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.3,
+      },
+    },
+    hover: { scale: 1.1, transition: { duration: 0.7 } },
+  };
+
   return (
     <motion.div
       animate={{ opacity: 1 }}
@@ -92,12 +108,18 @@ const Navbar = () => {
       </ul>
 
       {/* menu icon */}
-      <div onClick={handleClick} className="md:hidden z-10">
+      <motion.div
+        whileHover={{ scale: 1.5 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={handleClick}
+        className="md:hidden z-10"
+      >
         {!Nav ? <FaBars /> : <FaTimes />}
-      </div>
+      </motion.div>
 
       {/* mobile menu */}
-      <ul
+      <motion.ul
+        variants={menuAni}
         className={
           !Nav
             ? "hidden"
@@ -134,7 +156,7 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-      </ul>
+      </motion.ul>
     </motion.div>
   );
 };
