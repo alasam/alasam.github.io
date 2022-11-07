@@ -25,7 +25,7 @@ const Contact = () => {
       <motion.form
         initial={{ x: "-50vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        ttransition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+        ttransition={{ type: "spring", bounce: 0.2, duration: 0.7 }}
         viewport={{ margin: "-250px" }}
         method="POST"
         action="https://getform.io/f/69fcb290-3b61-483e-af1b-1d44ad8c19c4"

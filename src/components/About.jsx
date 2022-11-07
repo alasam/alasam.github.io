@@ -12,7 +12,7 @@ const About = () => {
       <motion.div
         initial={{ x: "-54vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+        transition={{ type: "spring", bounce: 0.2, duration: 0.7 }}
         viewport={{ margin: "-250px" }}
         className="flex flex-col justify-center items-center w-full h-full"
       >

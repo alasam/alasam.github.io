@@ -25,7 +25,7 @@ const Skills = () => {
         duration: 0.3,
       },
     },
-    hover: { scale: 1.1, transition: { duration: 0.5 } },
+    hover: { scale: 1.1, transition: { duration: 0.7 } },
   };
 
   return (
