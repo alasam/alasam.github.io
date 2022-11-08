@@ -23,7 +23,7 @@ const Projects = () => {
       {/* container */}
       <motion.div
         ref={ref}
-        initial={{ x: "-30vw", opacity: 0 }}
+        initial={{ x: "-20vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", bounce: 0.2, duration: 0.7 }}
         className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full"
@@ -49,7 +49,7 @@ const Projects = () => {
               duration: 1,
             }}
             style={{ backgroundImage: `url(${jungle})` }}
-            className="shadow-lg shadow-black group container rounded-md text-center flex justify-center items-center mx-auto content-div"
+            className=" p-2 shadow-lg shadow-black group container rounded-md text-center flex justify-center items-center mx-auto content-div"
           >
             {/* hover effects */}
             <div className="opacity-0 group-hover:opacity-100">

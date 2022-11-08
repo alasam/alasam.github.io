@@ -16,7 +16,7 @@ const Contact = () => {
       {/* form container */}
       <motion.form
         ref={ref}
-        initial={{ x: "-55vw", opacity: 0 }}
+        initial={{ x: "20vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         ttransition={{ type: "spring", bounce: 0.2, duration: 0.7 }}
         method="POST"

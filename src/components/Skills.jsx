@@ -19,7 +19,7 @@ const Skills = () => {
 
   // Skills pop-up animation
   const popIn = {
-    hidden: { y: 100, opacity: 0 },
+    hidden: { y: 50, opacity: 0 },
     show: {
       y: 0,
       opacity: 1,
@@ -42,7 +42,7 @@ const Skills = () => {
 
       <motion.div
         ref={ref}
-        initial={{ x: "30vw", opacity: 0 }}
+        initial={{ x: "20vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
         className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center items-center w-full h-full"
