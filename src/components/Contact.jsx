@@ -18,7 +18,7 @@ const Contact = () => {
         ref={ref}
         initial={{ x: "20vw", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        ttransition={{ type: "spring", bounce: 0.2, duration: 0.7 }}
+        transition={{ type: "spring", bounce: 0.2, duration: 0.7 }}
         method="POST"
         action="https://getform.io/f/69fcb290-3b61-483e-af1b-1d44ad8c19c4"
         className="flex flex-col max-w-[600px] w-full text-[#344b43]"

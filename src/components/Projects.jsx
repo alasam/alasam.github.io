@@ -150,8 +150,8 @@ const Projects = () => {
 
           {/* matchmaker */}
           <motion.div
-            initial={{ y: 60, opactiy: 0 }}
-            whileInView={{ y: 0, opactiy: 1 }}
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{
               type: "spring",
               bounce: 0.2,
