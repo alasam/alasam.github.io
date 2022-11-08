@@ -56,14 +56,15 @@ const Projects = () => {
               <span className="text-2xl font-bold text-white tracking-wider inline border-b-2">
                 Jungle Rails
               </span>
-              <br></br>
+              <br />
               <span className="text-lg font-bold text-gray-300 tracking-wider px-3">
                 Mini e-commerce app built with Rails 6.1
               </span>
-              <br></br>
+              <br />
               <div className="pt-8 text-center inline-block align-middle">
                 <a
                   href="https://github.com/alasam/jungle-rails"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <button className="text-center text-blue-400 font-bold  flex items-center text-lg rounded-lg px-4 py-3 m-2 bg-white">
@@ -92,13 +93,17 @@ const Projects = () => {
               <span className="text-2xl font-bold text-white tracking-wider inline border-b-2">
                 Interview Scheduler
               </span>
-              <br></br>
+              <br />
               <span className="text-lg font-bold tracking-wider px-3 text-gray-300">
                 Interview Scheduling app focused on React
               </span>
-              <br></br>
+              <br />
               <div className="pt-8 text-center inline-block align-middle">
-                <a href="https://github.com/alasam/scheduler" target="_blank">
+                <a
+                  href="https://github.com/alasam/scheduler"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="text-center text-blue-400 font-bold  flex items-center text-lg rounded-lg px-4 py-3 m-2 bg-white">
                     <BsGithub size={30} /> GitHub
                   </button>
@@ -124,13 +129,17 @@ const Projects = () => {
               <span className="text-2xl font-bold text-white tracking-wider inline border-b-2">
                 Tweeter
               </span>
-              <br></br>
+              <br />
               <span className="text-lg font-bold tracking-wider px-3 text-gray-300">
                 Twitter clone built with HTML, CSS, JS, jQuery and AJAX
               </span>
-              <br></br>
+              <br />
               <div className="pt-8 text-center inline-block align-middle">
-                <a href="https://github.com/alasam/tweeter" target="_blank">
+                <a
+                  href="https://github.com/alasam/tweeter"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="text-center text-blue-400 font-bold  flex items-center text-lg rounded-lg px-4 py-3 m-2 bg-white">
                     <BsGithub size={30} /> GitHub
                   </button>
@@ -157,13 +166,17 @@ const Projects = () => {
               <span className="text-2xl font-bold text-white tracking-wider inline border-b-2">
                 Matchmaker
               </span>
-              <br></br>
+              <br />
               <span className="text-lg font-bold tracking-wider px-3 text-gray-300">
                 Tournament Organizer app build with Rails 7.0.1
               </span>
-              <br></br>
+              <br />
               <div className="pt-8 text-center inline-block align-middle">
-                <a href="https://github.com/TrentPf/Matchmaker" target="_blank">
+                <a
+                  href="https://github.com/TrentPf/Matchmaker"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="text-center text-blue-400 font-bold  flex items-center text-lg rounded-lg px-4 py-3 m-2 bg-white">
                     <BsGithub size={30} /> GitHub
                   </button>

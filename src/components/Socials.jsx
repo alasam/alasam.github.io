@@ -1,12 +1,6 @@
-import { default as React, useState } from "react";
-import { BsFillPersonFill, BsFillPersonLin } from "react-icons/bs";
-import {
-  FaBars,
-  FaFacebook,
-  FaGithub,
-  FaLinkedin,
-  FaTimes,
-} from "react-icons/fa";
+import { default as React } from "react";
+import { BsFillPersonFill } from "react-icons/bs";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 

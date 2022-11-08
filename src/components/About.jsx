@@ -1,4 +1,4 @@
-import { motion, useAnimation, useInView, whileInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
 import Avatar from "../assets/avatar.jpeg";
 
@@ -26,26 +26,28 @@ const About = () => {
         <div className="max-w-[1000px] w-full gap-8">
           <div className="text-center sm:pb-8 pl-4 pb-4">
             <p className="text-4xl font-bold inline border-b-4 border-[#E3C1D3]">
-              About
+              About Me
             </p>
           </div>
-          <div></div>
+          <div />
         </div>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div>
             <p className="text-center sm:text-right text-4xl font-bold py-2 text-gray-500">
-              Hello! Thanks for dropping by. <br></br>I'm Anthony Lasam
+              Hello! Thanks for dropping by. <br />
+              I'm Anthony Lasam
             </p>
             <p className="sm:text-right py-2">
-              I am a System Analyst with 8+ years of experience managing system
-              and environments, as well as 1+ year as a Deployment Specialist
-              reviewing and testing code in lower environments before deploying
-              updates and patches to Production. With many years working in the
-              Tech industry I have gained many skills, such as communication and
-              customer service, problem solving, hardware and software
-              familiarity, and recently gained coding knowledge, I believe my
-              passion for coding and learning will be a great fit with any
-              company that I have the privilage to work with.
+              I am former System Analyst looking to break and create things on
+              the internet. My web development journey started at the end of
+              2021 when I decided to take a shift from my IT home into
+              Development. I took the leap with Lighthouse Lab's 12 week Web
+              Development bootcamp and never turned back.
+              <br />
+              <br />
+              Fast forward to present day, I am now a fully fledged Full Stack
+              Developer focusing on Front End experience and customer
+              interaction. Looking forward to my next steps in my career!
             </p>
           </div>
           <div className="object-center md:shrink-0">
